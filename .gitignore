@@ -22,3 +22,4 @@ web/.vercel/
 # build
 dist/
 build/
+web/tsconfig.tsbuildinfo
