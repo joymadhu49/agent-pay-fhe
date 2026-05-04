@@ -1,0 +1,27 @@
+{
+  "name": "agent-pay-fhe",
+  "version": "0.1.0",
+  "private": true,
+  "license": "BSD-3-Clause-Clear",
+  "description": "Confidential AI-agent payments on Zama FHEVM. Builder + Bounty submission for Zama Developer Program S2.",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -C contracts test",
+    "test:sepolia": "pnpm -C contracts test:sepolia",
+    "compile": "pnpm -C contracts compile",
+    "deploy:sepolia": "pnpm -C contracts deploy:sepolia && pnpm tsx scripts/copy-abi.ts",
+    "verify:sepolia": "pnpm -C contracts verify:sepolia",
+    "seed": "pnpm -C contracts hardhat run scripts/seed-agents.ts --network sepolia",
+    "dev": "pnpm -C web dev",
+    "agent": "pnpm -C agent agent",
+    "lint": "pnpm -r lint"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "prettier": "^3.8.1"
+  }
+}

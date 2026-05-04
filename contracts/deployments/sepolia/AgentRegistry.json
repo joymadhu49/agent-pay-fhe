@@ -1,0 +1,421 @@
+{
+  "address": "0xc2827701f49966Ec7B9fC296aC37d17DF9B08C78",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "AlreadyRegistered",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidEndpoint",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidName",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotRegistered",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "PaginationOutOfRange",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "AgentDeregistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "endpoint",
+          "type": "string"
+        }
+      ],
+      "name": "AgentRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "endpoint",
+          "type": "string"
+        }
+      ],
+      "name": "AgentUpdated",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "deregister",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "a",
+          "type": "address"
+        }
+      ],
+      "name": "getAgent",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "endpoint",
+              "type": "string"
+            },
+            {
+              "internalType": "uint64",
+              "name": "registeredAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bool",
+              "name": "active",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct AgentRegistry.Agent",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "a",
+          "type": "address"
+        }
+      ],
+      "name": "isRegistered",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "offset",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "limit",
+          "type": "uint256"
+        }
+      ],
+      "name": "listAgents",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "endpoint",
+              "type": "string"
+            },
+            {
+              "internalType": "uint64",
+              "name": "registeredAt",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bool",
+              "name": "active",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct AgentRegistry.Agent[]",
+          "name": "page",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name_",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "endpoint_",
+          "type": "string"
+        }
+      ],
+      "name": "register",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalAgents",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name_",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "endpoint_",
+          "type": "string"
+        }
+      ],
+      "name": "update",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xcfa7d70d15c8163ee0bc03d64b1201ec5ccac8b56e0278fb72afc8b66d95b54e",
+  "receipt": {
+    "to": null,
+    "from": "0xc6b5079b78Df9AA059ba0eb3c324901AD89e68C2",
+    "contractAddress": "0xc2827701f49966Ec7B9fC296aC37d17DF9B08C78",
+    "transactionIndex": 30,
+    "gasUsed": "933687",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x70bc3700de7238e74fb6b10acf55339bdf318f2a501002c4518b2824e0cd499f",
+    "transactionHash": "0xcfa7d70d15c8163ee0bc03d64b1201ec5ccac8b56e0278fb72afc8b66d95b54e",
+    "logs": [],
+    "blockNumber": 10783555,
+    "cumulativeGasUsed": "6191977",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "bd1bcd0db32bbd3ab1a18ceb38b38965",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.27+commit.40a35a09\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"AlreadyRegistered\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidEndpoint\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidName\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotRegistered\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"PaginationOutOfRange\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"AgentDeregistered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"endpoint\",\"type\":\"string\"}],\"name\":\"AgentRegistered\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"endpoint\",\"type\":\"string\"}],\"name\":\"AgentUpdated\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"deregister\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"a\",\"type\":\"address\"}],\"name\":\"getAgent\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"endpoint\",\"type\":\"string\"},{\"internalType\":\"uint64\",\"name\":\"registeredAt\",\"type\":\"uint64\"},{\"internalType\":\"bool\",\"name\":\"active\",\"type\":\"bool\"}],\"internalType\":\"struct AgentRegistry.Agent\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"a\",\"type\":\"address\"}],\"name\":\"isRegistered\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"offset\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"limit\",\"type\":\"uint256\"}],\"name\":\"listAgents\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"endpoint\",\"type\":\"string\"},{\"internalType\":\"uint64\",\"name\":\"registeredAt\",\"type\":\"uint64\"},{\"internalType\":\"bool\",\"name\":\"active\",\"type\":\"bool\"}],\"internalType\":\"struct AgentRegistry.Agent[]\",\"name\":\"page\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"endpoint_\",\"type\":\"string\"}],\"name\":\"register\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalAgents\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name_\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"endpoint_\",\"type\":\"string\"}],\"name\":\"update\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"AgentRegistry\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"Public registry of AI agents identified by EOA. Metadata is intentionally         public so peers can discover endpoints; payment amounts stay encrypted in         {ConfidentialPaymentRouter}.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/AgentRegistry.sol\":\"AgentRegistry\"},\"evmVersion\":\"cancun\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/AgentRegistry.sol\":{\"content\":\"// SPDX-License-Identifier: BSD-3-Clause-Clear\\npragma solidity ^0.8.27;\\n\\n/// @title AgentRegistry\\n/// @notice Public registry of AI agents identified by EOA. Metadata is intentionally\\n///         public so peers can discover endpoints; payment amounts stay encrypted in\\n///         {ConfidentialPaymentRouter}.\\ncontract AgentRegistry {\\n    struct Agent {\\n        address owner;\\n        string name;\\n        string endpoint;\\n        uint64 registeredAt;\\n        bool active;\\n    }\\n\\n    mapping(address => Agent) private _agents;\\n    address[] private _addresses;\\n    mapping(address => uint256) private _idxPlusOne;\\n\\n    event AgentRegistered(address indexed owner, string name, string endpoint);\\n    event AgentUpdated(address indexed owner, string name, string endpoint);\\n    event AgentDeregistered(address indexed owner);\\n\\n    error AlreadyRegistered();\\n    error NotRegistered();\\n    error InvalidName();\\n    error InvalidEndpoint();\\n    error PaginationOutOfRange();\\n\\n    function register(string calldata name_, string calldata endpoint_) external {\\n        if (_idxPlusOne[msg.sender] != 0) revert AlreadyRegistered();\\n        _validate(name_, endpoint_);\\n\\n        _addresses.push(msg.sender);\\n        _idxPlusOne[msg.sender] = _addresses.length;\\n        _agents[msg.sender] = Agent({\\n            owner: msg.sender,\\n            name: name_,\\n            endpoint: endpoint_,\\n            registeredAt: uint64(block.timestamp),\\n            active: true\\n        });\\n\\n        emit AgentRegistered(msg.sender, name_, endpoint_);\\n    }\\n\\n    function update(string calldata name_, string calldata endpoint_) external {\\n        if (_idxPlusOne[msg.sender] == 0) revert NotRegistered();\\n        _validate(name_, endpoint_);\\n\\n        Agent storage a = _agents[msg.sender];\\n        a.name = name_;\\n        a.endpoint = endpoint_;\\n        a.active = true;\\n\\n        emit AgentUpdated(msg.sender, name_, endpoint_);\\n    }\\n\\n    function deregister() external {\\n        uint256 idxPlusOne = _idxPlusOne[msg.sender];\\n        if (idxPlusOne == 0) revert NotRegistered();\\n\\n        uint256 idx = idxPlusOne - 1;\\n        uint256 last = _addresses.length - 1;\\n        if (idx != last) {\\n            address moved = _addresses[last];\\n            _addresses[idx] = moved;\\n            _idxPlusOne[moved] = idx + 1;\\n        }\\n        _addresses.pop();\\n        delete _idxPlusOne[msg.sender];\\n        delete _agents[msg.sender];\\n\\n        emit AgentDeregistered(msg.sender);\\n    }\\n\\n    function isRegistered(address a) external view returns (bool) {\\n        return _idxPlusOne[a] != 0;\\n    }\\n\\n    function getAgent(address a) external view returns (Agent memory) {\\n        if (_idxPlusOne[a] == 0) revert NotRegistered();\\n        return _agents[a];\\n    }\\n\\n    function totalAgents() external view returns (uint256) {\\n        return _addresses.length;\\n    }\\n\\n    function listAgents(uint256 offset, uint256 limit) external view returns (Agent[] memory page) {\\n        uint256 total = _addresses.length;\\n        if (offset > total) revert PaginationOutOfRange();\\n        uint256 end = offset + limit;\\n        if (end > total) end = total;\\n        page = new Agent[](end - offset);\\n        for (uint256 i = offset; i < end; ++i) {\\n            page[i - offset] = _agents[_addresses[i]];\\n        }\\n    }\\n\\n    function _validate(string calldata name_, string calldata endpoint_) internal pure {\\n        uint256 nlen = bytes(name_).length;\\n        uint256 elen = bytes(endpoint_).length;\\n        if (nlen == 0 || nlen > 64) revert InvalidName();\\n        if (elen == 0 || elen > 256) revert InvalidEndpoint();\\n    }\\n}\\n\",\"keccak256\":\"0xd1ca21e98145a7ce4c2ae90059385fcc1491d9dd5f6878ca5d9367b1de857041\",\"license\":\"BSD-3-Clause-Clear\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600e575f5ffd5b50610fea8061001c5f395ff3fe608060405234801561000f575f5ffd5b506004361061007a575f3560e01c8063c3c5a54711610058578063c3c5a547146100c4578063c5053712146100fe578063f4c84d191461010f578063fb3551ff14610122575f5ffd5b80631047d2091461007e5780633ffbd47f146100a7578063aff5edb1146100bc575b5f5ffd5b61009161008c366004610ad8565b610142565b60405161009e9190610b93565b60405180910390f35b6100ba6100b5366004610c3b565b6103df565b005b6100ba6105dc565b6100ee6100d2366004610ca7565b6001600160a01b03165f90815260026020526040902054151590565b604051901515815260200161009e565b60015460405190815260200161009e565b6100ba61011d366004610c3b565b610775565b610135610130366004610ca7565b610843565b60405161009e9190610cd4565b6001546060908084111561016957604051632b1f14df60e21b815260040160405180910390fd5b5f6101748486610cfa565b9050818111156101815750805b61018b8582610d13565b67ffffffffffffffff8111156101a3576101a3610d26565b6040519080825280602002602001820160405280156101fa57816020015b6040805160a0810182525f808252606060208084018290529383018190528201819052608082015282525f199092019101816101c15790505b509250845b818110156103d6575f5f6001838154811061021c5761021c610d3a565b5f9182526020808320909101546001600160a01b039081168452838201949094526040928301909120825160a08101909352805490931682526001830180549293929184019161026b90610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461029790610d4e565b80156102e25780601f106102b9576101008083540402835291602001916102e2565b820191905f5260205f20905b8154815290600101906020018083116102c557829003601f168201915b505050505081526020016002820180546102fb90610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461032790610d4e565b80156103725780601f1061034957610100808354040283529160200191610372565b820191905f5260205f20905b81548152906001019060200180831161035557829003601f168201915b50505091835250506003919091015467ffffffffffffffff8116602083015268010000000000000000900460ff161515604090910152846103b38884610d13565b815181106103c3576103c3610d3a565b60209081029190910101526001016101ff565b50505092915050565b335f908152600260205260409020541561040c57604051630ea075bf60e21b815260040160405180910390fd5b61041884848484610a25565b6001805480820182557fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf60180546001600160a01b0319163390811790915590545f8281526002602090815260409182902092909255805160a0810182529283528051601f87018390048302810183019091528581528282019187908790819084018382808284375f92019190915250505090825250604080516020601f8601819004810282018101909252848152918101919085908590819084018382808284375f9201829052509385525050504267ffffffffffffffff166020808401919091526001604093840181905233835282825292909120835181546001600160a01b0319166001600160a01b0390911617815590830151909182019061053d9082610dd2565b50604082015160028201906105529082610dd2565b506060820151600390910180546080909301511515680100000000000000000268ffffffffffffffffff1990931667ffffffffffffffff9092169190911791909117905560405133907f37b3aaf4f807403887412a5994aa1832eface4a8c15501a3311bf21d3279ea3f906105ce908790879087908790610eb5565b60405180910390a250505050565b335f908152600260205260408120549081900361060c5760405163aba4733960e01b815260040160405180910390fd5b5f610618600183610d13565b600180549192505f9161062b9190610d13565b90508082146106c3575f6001828154811061064857610648610d3a565b5f91825260209091200154600180546001600160a01b03909216925082918590811061067657610676610d3a565b5f91825260209091200180546001600160a01b0319166001600160a01b03929092169190911790556106a9836001610cfa565b6001600160a01b039091165f908152600260205260409020555b60018054806106d4576106d4610ee6565b5f828152602080822083015f1990810180546001600160a01b031990811690915593019093553381526002835260408082208290559281905291822080549091168155906107256001830182610a86565b610732600283015f610a86565b50600301805468ffffffffffffffffff1916905560405133907fcd7d9ced6282be80b75fa747c535d58e02a973ac92b9707cb663514caa62fb8d905f90a2505050565b335f9081526002602052604081205490036107a35760405163aba4733960e01b815260040160405180910390fd5b6107af84848484610a25565b335f908152602081905260409020600181016107cc858783610efa565b50600281016107dc838583610efa565b5060038101805468ff000000000000000019166801000000000000000017905560405133907fa2c9530e3d0bc4c899db52361ec84bcc1c9f87a5b7d1b584b3de374f36d7a18990610834908890889088908890610eb5565b60405180910390a25050505050565b6040805160a0810182525f80825260606020808401829052838501829052908301829052608083018290526001600160a01b038516825260029052918220549091036108a25760405163aba4733960e01b815260040160405180910390fd5b6001600160a01b038083165f9081526020818152604091829020825160a0810190935280549093168252600183018054929392918401916108e290610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461090e90610d4e565b80156109595780601f1061093057610100808354040283529160200191610959565b820191905f5260205f20905b81548152906001019060200180831161093c57829003601f168201915b5050505050815260200160028201805461097290610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461099e90610d4e565b80156109e95780601f106109c0576101008083540402835291602001916109e9565b820191905f5260205f20905b8154815290600101906020018083116109cc57829003601f168201915b50505091835250506003919091015467ffffffffffffffff8116602083015268010000000000000000900460ff16151560409091015292915050565b8281811580610a345750604082115b15610a525760405163430f13b360e01b815260040160405180910390fd5b801580610a60575061010081115b15610a7e5760405163f1cbb56760e01b815260040160405180910390fd5b505050505050565b508054610a9290610d4e565b5f825580601f10610aa1575050565b601f0160209004905f5260205f2090810190610abd9190610ac0565b50565b5b80821115610ad4575f8155600101610ac1565b5090565b5f5f60408385031215610ae9575f5ffd5b50508035926020909101359150565b5f81518084528060208401602086015e5f602082860101526020601f19601f83011685010191505092915050565b6001600160a01b0381511682525f602082015160a06020850152610b4d60a0850182610af8565b905060408301518482036040860152610b668282610af8565b91505067ffffffffffffffff60608401511660608501526080830151151560808501528091505092915050565b5f602082016020835280845180835260408501915060408160051b8601019250602086015f5b82811015610bea57603f19878603018452610bd5858351610b26565b94506020938401939190910190600101610bb9565b50929695505050505050565b5f5f83601f840112610c06575f5ffd5b50813567ffffffffffffffff811115610c1d575f5ffd5b602083019150836020828501011115610c34575f5ffd5b9250929050565b5f5f5f5f60408587031215610c4e575f5ffd5b843567ffffffffffffffff811115610c64575f5ffd5b610c7087828801610bf6565b909550935050602085013567ffffffffffffffff811115610c8f575f5ffd5b610c9b87828801610bf6565b95989497509550505050565b5f60208284031215610cb7575f5ffd5b81356001600160a01b0381168114610ccd575f5ffd5b9392505050565b602081525f610ccd6020830184610b26565b634e487b7160e01b5f52601160045260245ffd5b80820180821115610d0d57610d0d610ce6565b92915050565b81810381811115610d0d57610d0d610ce6565b634e487b7160e01b5f52604160045260245ffd5b634e487b7160e01b5f52603260045260245ffd5b600181811c90821680610d6257607f821691505b602082108103610d8057634e487b7160e01b5f52602260045260245ffd5b50919050565b601f821115610dcd57805f5260205f20601f840160051c81016020851015610dab5750805b601f840160051c820191505b81811015610dca575f8155600101610db7565b50505b505050565b815167ffffffffffffffff811115610dec57610dec610d26565b610e0081610dfa8454610d4e565b84610d86565b6020601f821160018114610e32575f8315610e1b5750848201515b5f19600385901b1c1916600184901b178455610dca565b5f84815260208120601f198516915b82811015610e615787850151825560209485019460019092019101610e41565b5084821015610e7e57868401515f19600387901b60f8161c191681555b50505050600190811b01905550565b81835281816020850137505f828201602090810191909152601f909101601f19169091010190565b604081525f610ec8604083018688610e8d565b8281036020840152610edb818587610e8d565b979650505050505050565b634e487b7160e01b5f52603160045260245ffd5b67ffffffffffffffff831115610f1257610f12610d26565b610f2683610f208354610d4e565b83610d86565b5f601f841160018114610f57575f8515610f405750838201355b5f19600387901b1c1916600186901b178355610dca565b5f83815260208120601f198716915b82811015610f865786850135825560209485019460019092019101610f66565b5086821015610fa2575f1960f88860031b161c19848701351681555b505060018560011b018355505050505056fea2646970667358221220e56d2f90f98dbfc85cd94240e38cbb9de13a36ad13c27729cf2c0c683e47007664736f6c634300081b0033",
+  "deployedBytecode": "0x608060405234801561000f575f5ffd5b506004361061007a575f3560e01c8063c3c5a54711610058578063c3c5a547146100c4578063c5053712146100fe578063f4c84d191461010f578063fb3551ff14610122575f5ffd5b80631047d2091461007e5780633ffbd47f146100a7578063aff5edb1146100bc575b5f5ffd5b61009161008c366004610ad8565b610142565b60405161009e9190610b93565b60405180910390f35b6100ba6100b5366004610c3b565b6103df565b005b6100ba6105dc565b6100ee6100d2366004610ca7565b6001600160a01b03165f90815260026020526040902054151590565b604051901515815260200161009e565b60015460405190815260200161009e565b6100ba61011d366004610c3b565b610775565b610135610130366004610ca7565b610843565b60405161009e9190610cd4565b6001546060908084111561016957604051632b1f14df60e21b815260040160405180910390fd5b5f6101748486610cfa565b9050818111156101815750805b61018b8582610d13565b67ffffffffffffffff8111156101a3576101a3610d26565b6040519080825280602002602001820160405280156101fa57816020015b6040805160a0810182525f808252606060208084018290529383018190528201819052608082015282525f199092019101816101c15790505b509250845b818110156103d6575f5f6001838154811061021c5761021c610d3a565b5f9182526020808320909101546001600160a01b039081168452838201949094526040928301909120825160a08101909352805490931682526001830180549293929184019161026b90610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461029790610d4e565b80156102e25780601f106102b9576101008083540402835291602001916102e2565b820191905f5260205f20905b8154815290600101906020018083116102c557829003601f168201915b505050505081526020016002820180546102fb90610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461032790610d4e565b80156103725780601f1061034957610100808354040283529160200191610372565b820191905f5260205f20905b81548152906001019060200180831161035557829003601f168201915b50505091835250506003919091015467ffffffffffffffff8116602083015268010000000000000000900460ff161515604090910152846103b38884610d13565b815181106103c3576103c3610d3a565b60209081029190910101526001016101ff565b50505092915050565b335f908152600260205260409020541561040c57604051630ea075bf60e21b815260040160405180910390fd5b61041884848484610a25565b6001805480820182557fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf60180546001600160a01b0319163390811790915590545f8281526002602090815260409182902092909255805160a0810182529283528051601f87018390048302810183019091528581528282019187908790819084018382808284375f92019190915250505090825250604080516020601f8601819004810282018101909252848152918101919085908590819084018382808284375f9201829052509385525050504267ffffffffffffffff166020808401919091526001604093840181905233835282825292909120835181546001600160a01b0319166001600160a01b0390911617815590830151909182019061053d9082610dd2565b50604082015160028201906105529082610dd2565b506060820151600390910180546080909301511515680100000000000000000268ffffffffffffffffff1990931667ffffffffffffffff9092169190911791909117905560405133907f37b3aaf4f807403887412a5994aa1832eface4a8c15501a3311bf21d3279ea3f906105ce908790879087908790610eb5565b60405180910390a250505050565b335f908152600260205260408120549081900361060c5760405163aba4733960e01b815260040160405180910390fd5b5f610618600183610d13565b600180549192505f9161062b9190610d13565b90508082146106c3575f6001828154811061064857610648610d3a565b5f91825260209091200154600180546001600160a01b03909216925082918590811061067657610676610d3a565b5f91825260209091200180546001600160a01b0319166001600160a01b03929092169190911790556106a9836001610cfa565b6001600160a01b039091165f908152600260205260409020555b60018054806106d4576106d4610ee6565b5f828152602080822083015f1990810180546001600160a01b031990811690915593019093553381526002835260408082208290559281905291822080549091168155906107256001830182610a86565b610732600283015f610a86565b50600301805468ffffffffffffffffff1916905560405133907fcd7d9ced6282be80b75fa747c535d58e02a973ac92b9707cb663514caa62fb8d905f90a2505050565b335f9081526002602052604081205490036107a35760405163aba4733960e01b815260040160405180910390fd5b6107af84848484610a25565b335f908152602081905260409020600181016107cc858783610efa565b50600281016107dc838583610efa565b5060038101805468ff000000000000000019166801000000000000000017905560405133907fa2c9530e3d0bc4c899db52361ec84bcc1c9f87a5b7d1b584b3de374f36d7a18990610834908890889088908890610eb5565b60405180910390a25050505050565b6040805160a0810182525f80825260606020808401829052838501829052908301829052608083018290526001600160a01b038516825260029052918220549091036108a25760405163aba4733960e01b815260040160405180910390fd5b6001600160a01b038083165f9081526020818152604091829020825160a0810190935280549093168252600183018054929392918401916108e290610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461090e90610d4e565b80156109595780601f1061093057610100808354040283529160200191610959565b820191905f5260205f20905b81548152906001019060200180831161093c57829003601f168201915b5050505050815260200160028201805461097290610d4e565b80601f016020809104026020016040519081016040528092919081815260200182805461099e90610d4e565b80156109e95780601f106109c0576101008083540402835291602001916109e9565b820191905f5260205f20905b8154815290600101906020018083116109cc57829003601f168201915b50505091835250506003919091015467ffffffffffffffff8116602083015268010000000000000000900460ff16151560409091015292915050565b8281811580610a345750604082115b15610a525760405163430f13b360e01b815260040160405180910390fd5b801580610a60575061010081115b15610a7e5760405163f1cbb56760e01b815260040160405180910390fd5b505050505050565b508054610a9290610d4e565b5f825580601f10610aa1575050565b601f0160209004905f5260205f2090810190610abd9190610ac0565b50565b5b80821115610ad4575f8155600101610ac1565b5090565b5f5f60408385031215610ae9575f5ffd5b50508035926020909101359150565b5f81518084528060208401602086015e5f602082860101526020601f19601f83011685010191505092915050565b6001600160a01b0381511682525f602082015160a06020850152610b4d60a0850182610af8565b905060408301518482036040860152610b668282610af8565b91505067ffffffffffffffff60608401511660608501526080830151151560808501528091505092915050565b5f602082016020835280845180835260408501915060408160051b8601019250602086015f5b82811015610bea57603f19878603018452610bd5858351610b26565b94506020938401939190910190600101610bb9565b50929695505050505050565b5f5f83601f840112610c06575f5ffd5b50813567ffffffffffffffff811115610c1d575f5ffd5b602083019150836020828501011115610c34575f5ffd5b9250929050565b5f5f5f5f60408587031215610c4e575f5ffd5b843567ffffffffffffffff811115610c64575f5ffd5b610c7087828801610bf6565b909550935050602085013567ffffffffffffffff811115610c8f575f5ffd5b610c9b87828801610bf6565b95989497509550505050565b5f60208284031215610cb7575f5ffd5b81356001600160a01b0381168114610ccd575f5ffd5b9392505050565b602081525f610ccd6020830184610b26565b634e487b7160e01b5f52601160045260245ffd5b80820180821115610d0d57610d0d610ce6565b92915050565b81810381811115610d0d57610d0d610ce6565b634e487b7160e01b5f52604160045260245ffd5b634e487b7160e01b5f52603260045260245ffd5b600181811c90821680610d6257607f821691505b602082108103610d8057634e487b7160e01b5f52602260045260245ffd5b50919050565b601f821115610dcd57805f5260205f20601f840160051c81016020851015610dab5750805b601f840160051c820191505b81811015610dca575f8155600101610db7565b50505b505050565b815167ffffffffffffffff811115610dec57610dec610d26565b610e0081610dfa8454610d4e565b84610d86565b6020601f821160018114610e32575f8315610e1b5750848201515b5f19600385901b1c1916600184901b178455610dca565b5f84815260208120601f198516915b82811015610e615787850151825560209485019460019092019101610e41565b5084821015610e7e57868401515f19600387901b60f8161c191681555b50505050600190811b01905550565b81835281816020850137505f828201602090810191909152601f909101601f19169091010190565b604081525f610ec8604083018688610e8d565b8281036020840152610edb818587610e8d565b979650505050505050565b634e487b7160e01b5f52603160045260245ffd5b67ffffffffffffffff831115610f1257610f12610d26565b610f2683610f208354610d4e565b83610d86565b5f601f841160018114610f57575f8515610f405750838201355b5f19600387901b1c1916600186901b178355610dca565b5f83815260208120601f198716915b82811015610f865786850135825560209485019460019092019101610f66565b5086821015610fa2575f1960f88860031b161c19848701351681555b505060018560011b018355505050505056fea2646970667358221220e56d2f90f98dbfc85cd94240e38cbb9de13a36ad13c27729cf2c0c683e47007664736f6c634300081b0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "AgentRegistry",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "Public registry of AI agents identified by EOA. Metadata is intentionally         public so peers can discover endpoints; payment amounts stay encrypted in         {ConfidentialPaymentRouter}.",
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 42190,
+        "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+        "label": "_agents",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_address,t_struct(Agent)42185_storage)"
+      },
+      {
+        "astId": 42193,
+        "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+        "label": "_addresses",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_address)dyn_storage"
+      },
+      {
+        "astId": 42197,
+        "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+        "label": "_idxPlusOne",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_address)dyn_storage": {
+        "base": "t_address",
+        "encoding": "dynamic_array",
+        "label": "address[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_struct(Agent)42185_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct AgentRegistry.Agent)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Agent)42185_storage"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Agent)42185_storage": {
+        "encoding": "inplace",
+        "label": "struct AgentRegistry.Agent",
+        "members": [
+          {
+            "astId": 42176,
+            "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+            "label": "owner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 42178,
+            "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+            "label": "name",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 42180,
+            "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+            "label": "endpoint",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 42182,
+            "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+            "label": "registeredAt",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint64"
+          },
+          {
+            "astId": 42184,
+            "contract": "contracts/AgentRegistry.sol:AgentRegistry",
+            "label": "active",
+            "offset": 8,
+            "slot": "3",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint64": {
+        "encoding": "inplace",
+        "label": "uint64",
+        "numberOfBytes": "8"
+      }
+    }
+  }
+}
