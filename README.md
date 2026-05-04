@@ -31,7 +31,7 @@ the skill points to.
 
 ```bash
 # Prereqs: Node ≥20, pnpm ≥9, a Sepolia RPC URL + funded private key
-git clone https://github.com/<your-handle>/agent-pay-fhe
+git clone https://github.com/joymadhu49/agent-pay-fhe
 cd agent-pay-fhe
 cp .env.example .env   # fill in PRIVATE_KEY, SEPOLIA_RPC_URL, ETHERSCAN_API_KEY
 

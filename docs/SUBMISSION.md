@@ -31,9 +31,9 @@ Deadline: **2026-05-10, 23:59 AOE** (submit ≥12 hours early).
 
 ## Resources to attach in both forms
 
-- Repo URL: `https://github.com/<your-handle>/agent-pay-fhe`
+- Repo URL: `https://github.com/joymadhu49/agent-pay-fhe`
 - Live demo URL: `https://<your-vercel>.vercel.app`
-- SKILL.md raw URL: `https://raw.githubusercontent.com/<your-handle>/agent-pay-fhe/main/SKILL.md`
+- SKILL.md raw URL: `https://raw.githubusercontent.com/joymadhu49/agent-pay-fhe/main/SKILL.md`
 - Etherscan links:
   - AgentRegistry: `https://sepolia.etherscan.io/address/<addr>`
   - ConfidentialPaymentRouter: `https://sepolia.etherscan.io/address/<addr>`

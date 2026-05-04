@@ -17,7 +17,7 @@ between two AI agents and understands why FHE matters.
 | 1:15–1:55 | Alice → `/agents` → click Bob → "Pay 3" → tx confirms | "Alice pays Bob 3 cUSDT. The amount goes through `FHE.fromExternal` and `FHE.add`. Look at the tx: no cleartext anywhere — only ciphertexts." |
 | 1:55–2:20 | Switch to Bob's wallet → `/me` → "Reveal my balance" → 3.000000 | "Bob signs an EIP-712 request and the relayer decrypts only for Bob: 3 cUSDT. No one else can see this." |
 | 2:20–2:40 | Alice → `/me` → "Exit" → wait → cUSDT in wallet | "Alice exits. The decryption oracle settles, the router transfers cUSDT back. End-to-end private, on-chain settled." |
-| 2:40–3:00 | Cut to GitHub repo + SKILL.md | "Source, contracts, and SKILL.md for the Bounty track at github.com/<you>/agent-pay-fhe." |
+| 2:40–3:00 | Cut to GitHub repo + SKILL.md | "Source, contracts, and SKILL.md for the Bounty track at github.com/joymadhu49/agent-pay-fhe." |
 
 **Recording tips.**
 - Pre-fund both wallets with Sepolia ETH and mock cUSDT — show clean state.
@@ -38,7 +38,7 @@ human edits.
 | 0:30–1:00 | Drop into a fresh Claude Code session in an empty repo. Prompt: *"Using `SKILL.md`, write a confidential tip jar where anyone can tip an encrypted amount and only the owner can read the running total."* | "Fresh session. No prior context. Just the skill and the prompt." |
 | 1:00–2:10 | Time-lapse: agent reads SKILL.md, writes `ConfidentialTipJar.sol`, writes a hardhat test, runs `pnpm hardhat test`. Tests pass. | "Agent picks `euint64`. Adds `FHE.allowThis` and `FHE.allow(owner)` on every write. Branchless. Tests pass on the first run." |
 | 2:10–2:40 | Open the diff side-by-side with `skill/examples/03-input-proofs.sol` | "The output matches the canonical pattern from the worked example — same ACL discipline, same proof handling." |
-| 2:40–3:00 | Cut to repo + Sepolia Etherscan of agent-pay-fhe | "Repo, SKILL.md, and the agent-pay-fhe deployment at github.com/<you>/agent-pay-fhe." |
+| 2:40–3:00 | Cut to repo + Sepolia Etherscan of agent-pay-fhe | "Repo, SKILL.md, and the agent-pay-fhe deployment at github.com/joymadhu49/agent-pay-fhe." |
 
 **Recording tips.**
 - Run the agent in time-lapse (4×–8×) for the actual code generation; cut

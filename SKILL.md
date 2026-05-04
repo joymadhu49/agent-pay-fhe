@@ -13,7 +13,7 @@ contracts on Zama's FHEVM. It distills the FHEVM mental model, the canonical
 patterns, the most common footguns, and copy-paste recipes for tests and
 frontend integration. The agent should follow it line-by-line for first-pass
 correctness; reach for the worked example
-([`agent-pay-fhe`](https://github.com/<your-handle>/agent-pay-fhe)) for any
+([`agent-pay-fhe`](https://github.com/joymadhu49/agent-pay-fhe)) for any
 non-trivial flow (deposit, P2P pay, oracle settlement).
 
 ## When to use FHE on-chain (and when NOT to)
@@ -312,7 +312,7 @@ latency); run before video / submission only.
 
 ## Worked example
 
-The full reference repo: [`agent-pay-fhe`](https://github.com/<your-handle>/agent-pay-fhe).
+The full reference repo: [`agent-pay-fhe`](https://github.com/joymadhu49/agent-pay-fhe).
 Read in this order:
 
 1. `contracts/contracts/AgentRegistry.sol` — public registry (no FHE), shows
